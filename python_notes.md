@@ -362,10 +362,10 @@
 33. `rpartition()` method searches for the last occurrence of a specified string, and splits the string into a tuple containing three elements.
 
     ````python
-        txt = "I could eat bananas all day, bananas are my favorite fruit"
-        x = txt.rpartition("bananas")
-        print(x)
-        # Output - ('I could eat bananas all day, ', 'bananas', ' are my favorite fruit')
+    txt = "I could eat bananas all day, bananas are my favorite fruit"
+    x = txt.rpartition("bananas")
+    print(x)
+    # Output - ('I could eat bananas all day, ', 'bananas', ' are my favorite fruit')
     ````
 
 34. `replace()` - The `replace()` method replaces a specified phrase with another specified phrase. 
@@ -373,20 +373,20 @@
     **Syntax** -  `string.replace(oldvalue, newvalue, count)`
 
     ````python
-        txt = "I like bananas" 
-        x = txt.replace("bananas", "apples")
-        print(x)
-        # Ouput - I like apples
-        
-        txt = "one one was a race horse, two two was one too." #Replace all occurrence of the word "one"
-        x = txt.replace("one", "three")
-        print(x)
-        # Output - three three was a race horse, two two was three too."
-        
-        txt = "one one was a race horse, two two was one too." #Replace the two first occurrence of the word "one"
-        x = txt.replace("one", "three", 2)
-        print(x)
-        # Output - three three was a race horse, two two was one too."
+    txt = "I like bananas" 
+    x = txt.replace("bananas", "apples")
+    print(x)
+    # Ouput - I like apples
+    
+    txt = "one one was a race horse, two two was one too." #Replace all occurrence of the word "one"
+    x = txt.replace("one", "three")
+    print(x)
+    # Output - three three was a race horse, two two was three too."
+    
+    txt = "one one was a race horse, two two was one too." #Replace the two first occurrence of the word "one"
+    x = txt.replace("one", "three", 2)
+    print(x)
+    # Output - three three was a race horse, two two was one too."
     ````
 
 35. `endswith()` - The `endswith()` method returns True if the string ends with the specified value, otherwise False.  
@@ -394,14 +394,14 @@
     **Syntax** - `string.endswith(value, start, end)`
 
     ````python
-        txt = "Hello, welcome to my world."
-        
-        x = txt.endswith("my world.")
-        print(x)
-        # Output - True
-        
-        x = txt.endswith("my world.", 5, 11)
-        # Output - False     
+    txt = "Hello, welcome to my world."
+    
+    x = txt.endswith("my world.")
+    print(x)
+    # Output - True
+    
+    x = txt.endswith("my world.", 5, 11)
+    # Output - False     
     ````
 
 36. `rsplit()` - The `rsplit()` method splits a string into a list, starting from the right. If no "max" is specified, this method will return the same as the split() method.
@@ -411,15 +411,15 @@
     **Note**: When maxsplit is specified, the list will contain the specified number of elements plus one.
 
     ````python
-        txt = "apple, banana, cherry"
-        x = txt.rsplit(", ")
-        print(x)
-        # Output - ['apple', 'banana', 'cherry']
-        
-        txt = "apple, banana, cherry"
-        x = txt.rsplit(", ", 1) # setting the maxsplit parameter to 1, will return a list with 2 elements!
-        print(x)
-        # Output - ['apple, banana', 'cherry']
+    txt = "apple, banana, cherry"
+    x = txt.rsplit(", ")
+    print(x)
+    # Output - ['apple', 'banana', 'cherry']
+    
+    txt = "apple, banana, cherry"
+    x = txt.rsplit(", ", 1) # setting the maxsplit parameter to 1, will return a list with 2 elements!
+    print(x)
+    # Output - ['apple, banana', 'cherry']
     ````
 
 37. `split()` - The `split()` method splits a string into a list. You can specify the separator, default separator is any whitespace.
@@ -2046,3 +2046,12 @@ You can convert Python objects of the following types, into JSON strings:
     ````
 
 ---
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| Bananas       | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - tasty            |
++---------------+---------------+--------------------+
