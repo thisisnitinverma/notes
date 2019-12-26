@@ -1767,7 +1767,7 @@
 
 3. `with` statement in Python is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams.
 
-[Random Module](https://www.notion.so/04e4dad285b446e6ba29fa76512e904b)
+### Random Module
 
 1. `getrandbits()` method returns an integer in the specified size (in bits).
 
