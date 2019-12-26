@@ -1,5 +1,5 @@
 # Python Notes
----
+
 ### String Methods
 
 1.  `capitalise()` - The `capitalize()`  method returns a string where the first character is upper case.
@@ -531,7 +531,7 @@
 
 ---
 
-[Lists Method](https://www.notion.so/bafb573a00654ae795723039eaaabec6)
+### Lists Methods
 
 **Note** - Python does not have built-in support for Arrays, but Python Lists can be used instead.
 
@@ -703,7 +703,7 @@
 
 ---
 
-[Dictionary Methods](https://www.notion.so/716e8ce7db3d4771ac9e51c3615bdbc1)
+### Dictionary Methods
 
 1. `clear()` - The `clear()` method removes all the elements from a dictionary.
 
@@ -862,7 +862,7 @@
 
 ---
 
-[Tuple Methods](https://www.notion.so/b4d17e07d78d4de28d26bcaa188fb1bb)
+### Tuple Methods
 
 1. `count()` - The `count()` method returns the number of times a specified value appears in the tuple.
 
@@ -884,7 +884,7 @@
 
 ---
 
-[Set Methods](https://www.notion.so/7931ec2b43af4e439e8eea7adf6ff4bc)
+### Set Methods
 
 1. `add()` -  The `add()` method adds an element to the set.
 
@@ -1015,7 +1015,7 @@
 
 ---
 
-[File Methods](https://www.notion.so/8acf931e90984c8f9cc94a403847c069)
+### File Methods
 
 1. `close()` - The `close()` method closes an open file.
 
@@ -1095,7 +1095,7 @@
 
 ---
 
-[Built in Functions](https://www.notion.so/d0abfd6822404bbda897d63385620692)
+### Built in Functions
 
 1. `abs()` function returns the absolute value of the specified number.
 
@@ -1736,7 +1736,7 @@
 
 ---
 
-[Keywords](https://www.notion.so/6d04e6e92e2c4c679d0c9e202a7efee7)
+### Keywords
 
 1. `nonlocal` keyword is used to work with variables inside nested functions, where the variable should not belong to the inner function.
 
@@ -1888,18 +1888,76 @@
 
 ---
 
-# Request module in python
+### Request module in python
 
 - The requests module allows you to send HTTP requests using Python.
 - The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
 - Use `pip install requests` to download.
 - **Syntax** - `requests.methodname(params)` .
 
-  [Module Methods](https://www.notion.so/bd87a7addbb0451a811ef3cc96b4f61d)
+  **Module Methods**
+  
+  | Method                      | Description                                                  |
+  | --------------------------- | ------------------------------------------------------------ |
+  | delete(url, args)           | Sends a DELETE request to the specified url                  |
+  | get(url, params, args)      | Sends a GET request to the specified url                     |
+  | head(url, args)             | Sends a HEAD request to the specified url                    |
+  | patch(url, data, args)      | Sends a PATCH request to the specified url                   |
+  | post(url, data, json, args) | Sends a POST request to the specified url                    |
+  | put(url, data, args)        | Sends a PUT request to the specified url                     |
+  | request(method, url, args)  | Sends a request of the specified method to the specified url |
 
-  [Response Object](https://www.notion.so/06c41f62ee8c492084e6376aacaac88a)
+  **Python requests.Response Object**
 
-  [Parameter Values](https://www.notion.so/8c54dd12933449b7880ba9badfcb1cc0)
+  | Property/Method       | Description                                                                                               |
+  | --------------------- | --------------------------------------------------------------------------------------------------------- |
+  | apparent_encoding     | Returns the apparent encoding                                                                             |
+  | close()               | Closes the connection to the server                                                                       |
+  | content               | Returns the content of the response, in bytes                                                             |
+  | cookies               | Returns a CookieJar object with the cookies sent back from the server                                     |
+  | elapsed               | Returns a timedelta object with the time elapsed from sending the request to the arrival of the response  |
+  | encoding              | Returns the encoding used to decode r.text                                                                |
+  | headers               | Returns a dictionary of response headers                                                                  |
+  | history               | Returns a list of response objects holding the history of request (url)                                   |
+  | is_permanent_redirect | Returns True if the response is the permanent redirected url, otherwise False                             |
+  | is_redirect           | Returns True if the response was redirected, otherwise False                                              |
+  | iter_content()        | Iterates over the response                                                                                |
+  | iter_lines()          | Iterates over the lines of the response                                                                   |
+  | json()                | Returns a JSON object of the result (if the result was written in JSON format, if not it raises an error) |
+  | links                 | Returns the header links                                                                                  |
+  | next                  | Returns a PreparedRequest object for the next request in a redirection                                    |
+  | ok                    | Returns True if status_code is less than 200, otherwise False                                             |
+  | raise_for_status()    | If an error occur, this method returns a HTTPError object                                                 |
+  | reason                | Returns a text corresponding to the status code                                                           |
+  | request               | Returns the request object that requested this response                                                   |
+  | status_code           | Returns a number that indicates the status (200 is OK, 404 is Not Found)                                  |
+  | text                  | Returns the content of the response, in unicode                                                           |
+  | url                   | Returns the URL of the response                                                                           |
+  
+  **Parameter Values**
+
+  | Parameter                                                                                | Description                                                                                                                     |
+  | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+  | url                                                                                      | Required. The url of the request                                                                                                |
+  | allow_redirects                                                                          | Optional. A Boolean to enable/disable redirection.                                                                              |
+  | Default True (allowing redirects)                                                        |                                                                                                                                 |
+  | auth                                                                                     | Optional. A tuple to enable a certain HTTP authentication.                                                                      |
+  | Default None                                                                             |                                                                                                                                 |
+  | cert                                                                                     | Optional. A String or Tuple specifying a cert file or key.                                                                      |
+  | Default None                                                                             |                                                                                                                                 |
+  | cookies                                                                                  | Optional. A dictionary of cookies to send to the specified url.                                                                 |
+  | Default None                                                                             |                                                                                                                                 |
+  | headers                                                                                  | Optional. A dictionary of HTTP headers to send to the specified url.                                                            |
+  | Default None                                                                             |                                                                                                                                 |
+  | proxies                                                                                  | Optional. A dictionary of the protocol to the proxy url.                                                                        |
+  | Default None                                                                             |                                                                                                                                 |
+  | stream                                                                                   | Optional. A Boolean indication if the response should be immediately downloaded (False) or streamed (True).                     |
+  | Default False                                                                            |                                                                                                                                 |
+  | timeout                                                                                  | Optional. A number, or a tuple, indicating how many seconds to wait for the client to make a connection and/or send a response. |
+  | Default None which means the request will continue until the connection is closed        |                                                                                                                                 |
+  | verify                                                                                   |                                                                                                                                 |
+  | Optional. A Boolean or a String indication to verify the servers TLS certificate or not. |                                                                                                                                 |
+  | Default True                                                                             |                                                                                                                                 |
 
 - `delete()` method sends a DELETE request to the specified url. DELETE requests are made for deleting the specified resource (file, record etc).
 
@@ -1918,19 +1976,31 @@
 
 # JSON in python
 
-You can convert Python objects of the following types, into JSON strings:
+- You can convert Python objects of the following types, into JSON strings:
 
-- dict
-- list
-- tuple
-- string
-- int
-- float
-- True
-- False
-- None
+  1. dict
+  2. list
+  3. tuple
+  4. string
+  5. int
+  6. float
+  7. True
+  8. False
+  9. None
 
-   [Python objects are converted into the JSON (JavaScript) equivalent:](https://www.notion.so/9399e86dd87f43b09cc52de56c3e004a)
+- **Python objects are converted into the JSON (JavaScript) equivalent:**
+
+    | Python | JSON   |
+    | ------ | ------ |
+    | dict   | Object |
+    | list   | Array  |
+    | tuple  | Array  |
+    | str    | String |
+    | int    | Number |
+    | float  | Number |
+    | True   | true   |
+    | False  | false  |
+    | None   | null   |
 
     ````python
     import json
@@ -1993,7 +2063,34 @@ You can convert Python objects of the following types, into JSON strings:
 - `datetime()` class requires three parameters to create a date: year, month, day.  `datetime()` class also takes parameters for time and timezone (hour, minute, second, microsecond, tzone), but they are optional, and has a default value of 0, (None for timezone).
 - `strftime()` is a method for formatting date objects into readable strings.
 
-    [A reference of all the legal format codes](https://www.notion.so/79547445e0bb4d77bea4a5384f311352)
+    **A reference of all the legal format codes**
+
+    | Directive | Description                                                 | Example                  |
+    | --------- | ----------------------------------------------------------- | ------------------------ |
+    | %a        | Weekday, short version                                      | Wed                      |
+    | %A        | Weekday, full version                                       | Wednesday                |
+    | %w        | Weekday as a number 0-6, 0 is Sunday                        | 3                        |
+    | %d        | Day of month 01-31                                          | 31                       |
+    | %b        | Month name, short version                                   | Dec                      |
+    | %B        | Month name, full version                                    | December                 |
+    | %m        | Month as a number 01-12                                     | 12                       |
+    | %y        | Year, short version, without century                        | 18                       |
+    | %Y        | Year, full version                                          | 2018                     |
+    | %H        | Hour 00-23                                                  | 17                       |
+    | %I        | Hour 00-12                                                  | 05                       |
+    | %p        | AM/PM                                                       | PM                       |
+    | %M        | Minute 00-59                                                | 41                       |
+    | %S        | Second 00-59                                                | 08                       |
+    | %f        | Microsecond 000000-999999                                   | 548513                   |
+    | %z        | UTC offset                                                  | +0100                    |
+    | %Z        | Timezone                                                    | CST                      |
+    | %j        | Day number of year 001-366                                  | 365                      |
+    | %U        | Week number of year, Sunday as the first day of week, 00-53 | 52                       |
+    | %W        | Week number of year, Monday as the first day of week, 00-53 | 52                       |
+    | %c        | Local version of date and time                              | Mon Dec 31 17:41:00 2018 |
+    | %x        | Local version of date                                       | 12/31/18                 |
+    | %X        | Local version of time                                       | 17:41:00                 |
+    | %%        | A % character                                               | %                        |
 
     ````python
     import datetime
@@ -2011,7 +2108,7 @@ You can convert Python objects of the following types, into JSON strings:
 
 ---
 
-# Mysql in Python
+### Mysql in Python
 
 - To use mysql in system install mysql and mysql workbench.
 - To install mysql driver use `python -m pip install mysql-connector`
@@ -2046,12 +2143,4 @@ You can convert Python objects of the following types, into JSON strings:
     ````
 
 ---
-+---------------+---------------+--------------------+
-| Fruit         | Price         | Advantages         |
-+===============+===============+====================+
-| Bananas       | $1.34         | - built-in wrapper |
-|               |               | - bright color     |
-+---------------+---------------+--------------------+
-| Oranges       | $2.10         | - cures scurvy     |
-|               |               | - tasty            |
-+---------------+---------------+--------------------+
+
