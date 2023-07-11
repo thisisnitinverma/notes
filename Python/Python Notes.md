@@ -1,5 +1,20 @@
 # Python Notes
 
+1. String Manipulation:
+- Case Conversion: `capitalize()`, `casefold()`, `lower()`, `swapcase()`, `title()`, `upper()`
+- Padding and Alignment: `center()`, `ljust()`, `rjust()`, `zfill()`
+- Substring Search and Replacement: `count()`, `find()`, `index()`, `rfind()`, `rindex()`, `startswith()`, `endswith()`, `replace()`
+- Substring Extraction and Splitting: `partition()`, `rpartition()`, `split()`, `rsplit()`, `splitlines()`
+- Trimming: `lstrip()`, `rstrip()`, `strip()`
+- Character Manipulation: `expandtabs()`, `maketrans()`, `translate()`
+- Joining: `join()`
+
+2. String Information:
+- Character Type Checking: `isalnum()`, `isalpha()`, `isdecimal()`, `isdigit()`, `isidentifier()`, `islower()`, `isnumeric()`, `isprintable()`, `isspace()`, `istitle()`, `isupper()`
+- ASCII and Identifier Checking: `isascii()`, `isidentifier()`
+
+
+
 ### String Methods
 
 1.  `capitalise()` - The `capitalize()`  method returns a string where the first character is upper case.
